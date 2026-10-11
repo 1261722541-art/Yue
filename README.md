@@ -1,3 +1,17 @@
+# BrandPilot V17 · 规则引擎 + Tavily + OpenRouter
+
+这版结合用户提供的最初版 HTML 规则逻辑和 V16 的联网 AI 后端。
+
+- 点击生成立即提供：全部已选渠道（逐个展示）、RACE、渠道预算、制作和预备金、四周排期、KPI、Big Idea *占位草案*。
+- Tavily 搜索获得真实资料后，展示可追溯来源；品牌事实需要人工核验。
+- OpenRouter 成功生成策略时再覆盖深化；若 502、超时、模型格式失败，仍保留并允许复制、导出基础方案。
+- AI 输出如遗漏勾选渠道，自动使用基础渠道模板补足，并保留用户预算核对。
+- 规则模板不是已经完成的品牌市场调研；创意主张和 KPI 均为建议与假设。
+
+环境变量：`TAVILY_API_KEY`、`OPENROUTER_API_KEY`、`OPENROUTER_MODEL`。
+
+GitHub 上传时保留 `public/index.html`、`netlify/functions/generate.mjs`、`netlify.toml` 的相对路径。
+
 # BrandPilot V16｜Tavily + OpenRouter 免费双模型版
 
 任意品牌输入，Tavily 搜索并列出真实网页链接；OpenRouter 将搜索摘录总结为品牌研究，并生成整合营销策略。研究仅使用搜索摘要，不代表已完整阅读网页。
